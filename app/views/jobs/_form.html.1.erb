@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
+    <%= simple_form_for @job, wrapper_mappings: { radio_buttons: :vertical_radio_and_checkboxes } do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :company %>
+      <%= f.input :website, as: :url %>
+      <%= f.input :title %>
+      <%= f.input :modality, as: :radio_buttons, collection: modalities_hash %>
+      <%= f.input :location %>
+      <%= f.input :email %>
+      <%= f.input :url, as: :url %>
+      <%= f.input :skills %>
+      <%= f.input :description %>
+      <%= f.input :contract_type, as: :radio_buttons, collection: contract_types_hash %>
+      <%= f.input :salary, as: :radio_buttons, collection: salaries_hash %>
+      <!--
+      <%= f.label :description %>
+      <div id="description-editor" class="markdown-editor">
+        <ul class="nav nav-tabs" data-tabs="tabs">
+          <li class="active">
+            <a href="#text" data-toggle="tab">Markdown</a>
+          </li>
+          <li>
+            <a href="#preview" data-toggle="tab">Preview</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="text">
+            <%= f.input :description, input_html: { :size => '50x5', 'v-model' => 'description' }, label: false %>
+          </div>
+          <div class="tab-pane" id="preview">
+            <div class="preview" v-html="description | marked"></div>
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="form-group <%= 'has-error' if @job.errors[:recaptcha] %>">
+
+        <!--%= recaptcha_tags%>-->
+        <span class="help-block"><%= @job.errors[:recaptcha].join(", ") %></span>
+      </div>
+
+      <%= link_to 'Back', root_url, :class => 'btn btn-default' %>
+      <%= f.button :submit, label: "Submit", class: "btn btn-brand" %>
+    <% end %>
+  </div>
+</div>

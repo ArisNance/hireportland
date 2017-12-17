@@ -78,7 +78,7 @@ RSpec.describe JobPresenter do
     context 'Not Speficied' do
       let(:contract_type) { 0 }
 
-      it { is_expected.to eq 'Não Especificado' }
+      it { is_expected.to eq 'Not specified' }
     end
 
     context 'CLT' do

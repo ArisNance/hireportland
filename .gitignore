@@ -15,4 +15,6 @@ config/database.yml
 /log/*.log
 /tmp
 
+#ignore .env
+.env
 coverage/

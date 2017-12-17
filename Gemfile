@@ -32,11 +32,17 @@ gem 'uglifier', '>= 1.3.0'
 gem 'vuejs-rails'
 
 gem 'burgundy', '~> 0.1.0'
+gem 'devise'
 
+# stripe integration
+gem 'stripe'
+# store credentials safely
+gem 'dotenv-rails'
 gem 'responders'
 gem 'bugsnag'
 
-gem 'recaptcha', require: 'recaptcha/rails'
+gem 'recaptcha'
+#, require: 'recaptcha/rails'
 
 gem 'active_model_serializers'
 gem 'rack-cors'

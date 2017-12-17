@@ -5,32 +5,32 @@ pt-BR:
         job:
           attributes:
             website:
-              invalid: "Formato inválido. Exemplo de formato permitido: http://www.nomedosite.com"
+              invalid: "Invalid format. Example: http://www.lavail.io"
 
   simple_form:
     labels:
       job:
-        title: "Título da vaga"
-        company: "Empresa"
-        website: "Site da empresa"
-        modality: "Qual é a modalidade de trabalho?"
-        location: "Localização"
-        email: "E-mail para contato"
-        url: "Endereço da vaga (quando preenchido, os candidatos serão encaminhados para este endereço)"
-        skills: "Habilidades/Requerimentos"
-        description: "Descrição"
-        salary: "Salário"
-        contract_type: "Tipo de Contratação"
+        title: "Position Title"
+        company: "Company"
+        website: "Company website"
+        modality: "Employment Type"
+        location: "Location"
+        email: "Contact E-mail"
+        url: "Application Link (when completed, candidates will be forwarded to this address)"
+        skills: "Skills/Requirements"
+        description: "Description"
+        salary: "Salary"
+        contract_type: "Type of Contract"
     placeholders:
       job:
-        title: "Desenvolvedor Ruby on Rails"
-        company: "Empresa S/A"
-        location: 'Rio de Janeiro - RJ'
-        email: 'contato@empresa.com'
-        url: "http://www.seusite.com.br/sua_vaga"
-        website: 'http://www.seusite.com.br'
-        skills: 'Necessário ter experiência com: Ruby, Ruby on Rails ou outro framework MVC.  Desejável: APIs REST, Test Driven Development, MongoDB e GIT'
-        description: 'Estamos contratando desenvolvedor Ruby/Rails, que já tenha experiência. Trabalhamos com metodologias ágeis, se tiver esta vivência também é legal =) Não precisa ser do Rio, contratamos pessoas remotas também. '
+        title: "Ruby on Rails Developer"
+        company: "Cybercoders"
+        location: 'New York, NY'
+        email: 'Contact Email'
+        url: "http://www.hmportland.com./apply"
+        website: 'http://www.hmportland.com'
+        skills: 'Ruby, Ruby on Rails or other MVC frameworks.  Desirable: APIs REST, Test Driven Development, MongoDB e GIT, Content Strategy, Copy Writing and Editing, Digital Content Strategy, Online Content Creation'
+        description: 'You’ll be in charge of the content strategy for all of our clients. We’ll rely heavily on you to set a strategy for the content creation of each client, and then to implement that strategy in tandem with a larger digital marketing strategy, with a team of content writers and specialists.'
     include_blanks:
       user:
         age: "Rather not say"

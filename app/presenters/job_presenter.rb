@@ -4,22 +4,22 @@ class JobPresenter < Burgundy::Item
   end
 
   def modality_name
-    %w(Presencial Remoto Freela Trainee)[Job.modalities[modality]]
+    %w(Full-Time Part-Time Remote Contact)[Job.modalities[modality]]
   end
 
   def salary_label
     %w(
       N/A
-      Abaixo\ de\ R$3.000
-      R$3.000\ -\ R$6.000
-      R$6.000\ -\ R$9.000
-      Acima\ de\ R$9.000
-      Valor\ hora\ a\ combinar)[Job.salaries[salary]]
+      $20K\ -\ $38K
+      $40K\ -\ $55K
+      $60K\ -\ $85K
+      $87K\ -\ $120K
+      Hourly )[Job.salaries[salary]]
   end
 
   def contract_type_label
     %w(
-      Não\ Especificado
+      Not\ Specified
       CLT
       PJ)[Job.contract_types[contract_type]]
   end

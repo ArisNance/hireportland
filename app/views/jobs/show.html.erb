@@ -1,10 +1,20 @@
+<style>
+#jobs-show .do-you-like-it img {
+    width: 150px;
+    position: absolute;
+    margin-top: -45px;
+    margin-left: -70px;
+    /* padding-right: 17px; */
+    float: right;
+}
+</style>
 <% content_for :opengraph do %>
   <meta property="og:type" content="article">
   <%= tag("meta", property: "og:title", content: @job.title ) %>
   <%= tag("meta", property: "og:description", content: @job.description ) %>
   <%= tag("meta", property: "og:url", content: job_url(@job) ) %>
   <%= tag("meta", property: "og:image", content: asset_url('logo-for-opengraph.png') ) %>
-  <%= tag("meta", property: "og:site_name", content: "Ruby Jobs" ) %>
+  <%= tag("meta", property: "og:site_name", content: "Tech Jobs" ) %>
 <% end %>
 
 <header id="inner">
@@ -24,7 +34,7 @@
       <%= render('job_description', job: @job, show_image: true) %>
     </div>
 
-    <%= link_to 'Voltar', root_url, :class => 'btn btn-default' %>
+    <%= link_to 'Back', root_url, :class => 'btn btn-default' %>
     <%= link_to_twitter @job.title %>
     <%= link_to_linkedin @job.title %>
 

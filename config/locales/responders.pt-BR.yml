@@ -2,4 +2,4 @@ pt-BR:
   flash:
     jobs:
       create:
-        notice: Job criado com sucesso!
+        notice: Your Job was created!

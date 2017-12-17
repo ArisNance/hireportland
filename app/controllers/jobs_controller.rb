@@ -6,19 +6,26 @@ class JobsController < ApplicationController
   end
 
   def new
+    authenticate_user!
+  if current_user.paid == true
     @job = Job.new
     respond_with @job
+  else
+    redirect_to new_charge_path
+  end
   end
 
   def create
     @job = Job.new(job_params)
 
     # check if recaptcha was answered correctly.
-    if verify_recaptcha(model: @job, attribute: :recaptcha) && @job.save
+   # if verify_recaptcha(model: @job, attribute: :recaptcha) &&
+      @job.save
+      current_user.update(paid: false)
       respond_with @job
-    else
-      render :new
-    end
+    #else
+     # render :new
+   # end
   end
 
   def show

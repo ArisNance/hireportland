@@ -7,9 +7,9 @@
         <% end %>
         <%= content_tag :span, "#{job.location}/#{job.modality_name}", class: "job-location" %>
         <%= content_tag :span, l(job.created_at, format: :long), class: "job-date" %>
-        <%= content_tag :span, %(Contratação: #{job.contract_type_label}), format: :long,
+        <%= content_tag :span, %(Hiring: #{job.contract_type_label}), format: :long,
           class: "job-contract-type-#{job.contract_type}" %>
-        <%= content_tag :span, %(Salário: #{job.salary_label}), format: :long, class: "job-salary-#{job.salary}" %>
+        <%= content_tag :span, %(Salary: #{job.salary_label}), format: :long, class: "job-salary-#{job.salary}" %>
       </p>
     </div>
 
@@ -18,7 +18,7 @@
     </div>
 
     <%= content_tag :div, class: "well skills" do %>
-      <h4> Habilidades </h4>
+      <h4> Skills </h4>
       <%= job.skills %>
     <% end if job.skills.present? %>
 
@@ -27,19 +27,19 @@
       <% if show_image == true %>
 
         <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1">
-          <%= image_tag  "logo.png" %>
+          <%= image_tag  "hire-portland-dark.png" %>
         </div>
 
       <% end%>
 
       <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11">
-        <h4> Gostou da vaga? </h4>
+        <h4> Like the position? </h4>
         <p>
           <% if job.url.present? %>
-            <%= link_to 'Participe do processo de seleção', job.url %> e caso seja contratado deixe-nos saber!
+            <%= link_to 'Apply', job.url %> and if you are hired let us know!
           <% else %>
-            Entre em contato com o responsável pelo e-mail <%= content_tag :span, (mail_to job.email), class: "email" %>
-            e caso seja contratado deixe-nos saber!
+            Contact the job poster <%= content_tag :span, (mail_to job.email), class: "email" %>
+            , and let us know if you get the job!
           <% end %>
         </p>
       </div>

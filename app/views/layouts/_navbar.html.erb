@@ -1,17 +1,31 @@
+<style>
+#main-nav .navbar-brand img{
+margin-right: 15px;
+max-width: 15.5% !important;
+position: absolute;
+margin-top: -6.5%;
+}
+
+</style>
 <div id="main-nav" class="navbar navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
         <i class="fa fa-bars"></i>
       </button>
-      <%= link_to (image_tag "logo.png"), root_path, class: 'navbar-brand' %>
+      <%= link_to (image_tag "hire-portland.png"), root_path, class: 'navbar-brand' %>
     </div>
 
     <div id="site-nav" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <% end %>
        <%= navbar(
-        ['Vagas', jobs_path],
-        ['Anuncie', new_job_path]
+        ['Jobs', jobs_path],
+        ['Post a Position', new_job_path]
         ).html_safe %>
       </ul>
     </div>

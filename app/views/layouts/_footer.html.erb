@@ -1,9 +1,19 @@
+<style>
+  #footer-img{
+    position: absolute;
+    width: 9%;
+    margin-top: -5.8%;
+    margin-left: -12%;
+  }
+`
+</style>
 <footer>
   <div class="container">
-    <p> Copyright © <%= Time.now.year %> <strong>RubyJobs.co</strong> </p>
+    <p>  © <%= Time.now.year %> <%= link_to image_tag("hire-portland.png", id: "footer-img"), root_path %> </p>
       <div class="links">
-        <%= link_to image_tag("rss_icon.png"), feed_path %>
-        <%= link_to image_tag("github.png"), "https://github.com/ruby-jobs/ruby-jobs" %>
+        <!--%= link_to image_tag("rss_icon.png"), feed_path %>-->
+        <!--%= link_to image_tag("github.png"), "https://github.com/ruby-jobs/ruby-jobs" %>-->
+        <%= link_to image_tag("jobs.png"), "https://hiremeseattle.com", target: "_blank" %>
       </div>
   </div>
 </footer>
