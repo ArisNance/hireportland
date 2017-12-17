@@ -77,4 +77,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { host: 'http://hmportland.com/' }
+  
+  # Stripe credentials
+  PUBLISHABLE_KEY="pk_test_4LDdmwyH6QZh8mndTnPrVxQg"
+  SECRET_KEY="sk_test_ckZnOSOpmki1XYMlgWTFQDTW"
 end
