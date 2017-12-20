@@ -7,12 +7,12 @@ class JobsController < ApplicationController
 
   def new
     authenticate_user!
-  if current_user.paid == true
+  #if current_user.paid == true
     @job = Job.new
     respond_with @job
-  else
-    redirect_to new_charge_path
-  end
+ # else
+  #  redirect_to new_charge_path
+ # end
   end
 
   def create
